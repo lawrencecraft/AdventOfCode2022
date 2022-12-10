@@ -108,7 +108,6 @@ def part_two(root: Node):
 
     while nodes:
         node = nodes.pop()
-        print(node.name, node.total_size)
         if node.total_size < smallest_node.total_size and node.total_size >= space_required:
             smallest_node = node
 

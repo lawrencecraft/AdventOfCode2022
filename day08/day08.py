@@ -18,7 +18,7 @@ def calculate_row_visibility(row):
 
 def print_treedom(visibility):
     for row in visibility:
-        print("".join(" O " if t else "   " for t in row))
+        print("".join("O" if t else " " for t in row))
 
     print(sum(1 if t else 0 for row in visibility for t in row), "visible trees")
 
