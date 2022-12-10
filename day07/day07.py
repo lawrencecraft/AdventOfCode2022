@@ -27,6 +27,7 @@ def build_filesystem():
             line = lines[0]
 
             if line.startswith("$ cd "):
+                # pylint: disable=redefined-builtin
                 dir = line[len("$ cd ") :]
                 print(dir)
 

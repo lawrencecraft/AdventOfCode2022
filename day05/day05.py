@@ -58,7 +58,8 @@ def parse_stack_line(line: str, stacks: list[list]):
 
 def build_container_definitions(lines):
     stacks = []
-    definition_lines = reversed(list(extract_container_definition_lines(lines)))
+    definition_lines = reversed(
+        list(extract_container_definition_lines(lines)))
 
     first_line = next(definition_lines)
 
@@ -108,10 +109,9 @@ def part_two(lines):
         for _ in range(move.quantity):
             crate = stacks[move.source].pop()
             to_add.append(crate)
-        
+
         while to_add:
             stacks[move.destination].append(to_add.pop())
-
 
     print("".join(stack[-1] for stack in stacks))
 

@@ -1,6 +1,3 @@
-import string
-
-
 def encompasses(i1, i2):
     return i1[0] <= i2[0] and i1[1] >= i2[1]
 

@@ -71,6 +71,7 @@ def calculate_scenic(trees: list[list[int]], row_idx, col_idx):
 
 
 def all_scenic(trees: list[list[int]]):
+    # pylint: disable=consider-using-enumerate
     for row_idx in range(len(trees)):
         for col_idx in range(len(trees[row_idx])):
             yield calculate_scenic(trees, row_idx, col_idx)
